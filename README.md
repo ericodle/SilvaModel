@@ -15,8 +15,8 @@ SilvaModel is a tool for embedding DNA sequences using various deep learning mod
 ## Features
 
 - Supports multiple models for embedding DNA sequences, including:
-  - CNNPhyloNet
   - MLPPhyloNet
+  - CNNPhyloNet
   - LSTMPhyloNet
   - Transformer-based PhyloNet (TrPhyloNet)
   - Autoencoder PhyloNet (AePhyloNet)
