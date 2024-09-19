@@ -14,7 +14,7 @@ This project explores which machine learning architecture best infers phylogenie
     <br />
 
 <!-- ABOUT THE PROJECT -->
-### Features
+## Features
 
 - Supports multiple models for embedding DNA sequences, including:
   - CNNPhyloNet
@@ -91,7 +91,8 @@ python3 ./src/train.py --model CNNPhyloNet --learning_rate 0.001
 Alternatively, you can run the batch train script
 ```sh
 chmod +x batch_train.sh
-/batch_train.sh
+
+./batch_train.sh
 ```
 
 ### Step 6: Run the test script
@@ -102,14 +103,15 @@ python3 test.py --model CNNPhyloNet --learning_rate 0.001 --clade plants
 Alternatively, you can run the batch test script
 ```sh
 chmod +x batch_test.sh
-/batch_test.sh
+
+./batch_test.sh
 ```
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
