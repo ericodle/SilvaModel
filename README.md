@@ -43,6 +43,9 @@ Make sure it returns Python 3.x. If not, upgrade to Python 3. This project was d
 ## Setup
 ### Step 1: Download the Repository
 Clone or download the repository to your local machine.
+```sh
+git clone https://github.com/ericodle/SilvaModel
+```
 
 ### Step 2: Navigate to the Project Directory
 Find the directory where your computer saved the project. Unzip the file if necessary, and use the following command to navigate to the working directory:
