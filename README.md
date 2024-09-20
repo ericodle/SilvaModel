@@ -76,9 +76,15 @@ pip3 install -r requirements.txt
 
 This will ensure compatibility with specific software versions.
 
+### Step 5: Manually add Silva Dataset to helper_files folder
+
+The training script looks for a file in the helper_files folder called "euk_extract.fasta" which contains all the Silva eukaryote 18S sequences.
+This file is around 800 MB in size, making distribution via GitHub tricky.
+I will explore LFS options in the near future.
+
 ## Running the Program
 
-### Step 5: Run the Training Script
+### Run the Training Script
 You can run the training script with the following command:
 
 ```sh
@@ -92,7 +98,7 @@ chmod +x batch_train.sh
 ./batch_train.sh
 ```
 
-### Step 6: Run the Test Script
+### Run the Test Script
 To test the model, run:
 
 ```sh
