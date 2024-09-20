@@ -51,7 +51,7 @@ git clone https://github.com/ericodle/SilvaModel
 Find the directory where your computer saved the project. Unzip the file if necessary, and use the following command to navigate to the working directory:
 
 ```sh
-cd /path/to/project/directory
+cd SilvaModel
 ```
 
 ### Step 3: Create a Virtual Environment
