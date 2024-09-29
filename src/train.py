@@ -212,3 +212,5 @@ if __name__ == "__main__":
     plt.savefig(os.path.join(output_dir, 'epochwise_loss.png'), dpi=400)
     plt.close()
 
+# Example execution
+# python3 ./src/train.py --model MLPPhyloNet --learning_rate 0.000001
