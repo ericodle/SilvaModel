@@ -37,7 +37,7 @@ echo "All experiments are complete!"
 
 #### How to run ####
 # 1) Make it executable:
-# chmod +x batch_train.sh
+# chmod +x batch_test.sh
 # 2) Run the script:
-# ./batch_train.sh
+# ./batch_test.sh
 
