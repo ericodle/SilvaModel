@@ -116,7 +116,7 @@ if __name__ == "__main__":
     model = eval(f"{args.model}()").to(device)
 
     # Load the saved model
-    model.load_state_dict(torch.load(f"./results/{args.model}_lr{args.learning_rate}/best_model.pt", map_location=device)) 
+    model.load_state_dict(torch.load(f"./training_results/{args.model}_lr{args.learning_rate}/best_model.pt", map_location=device)) 
 
     # Load the clade sequences
     fasta_file = f"./helper_files/{args.clade}.fasta"
