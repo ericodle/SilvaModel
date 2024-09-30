@@ -108,7 +108,7 @@ def save_metrics_to_csv(rf_metrics: list, output_file: str):
 
 if __name__ == "__main__":
     # Directory to save the results based on the model, learning rate, and clade
-    results_dir = f"./test/{args.model}_lr{args.learning_rate}/{args.clade}"
+    results_dir = f"./testing_results/{args.model}_lr{args.learning_rate}/{args.clade}"
     os.makedirs(results_dir, exist_ok=True)
 
     # Initialize model
