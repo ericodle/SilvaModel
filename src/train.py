@@ -48,7 +48,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Create output directory based on model and learning rate
-    output_dir = os.path.join(script_dir, '..', 'results', f'{args.model}_lr{args.learning_rate}')
+    output_dir = os.path.join(script_dir, '..', 'training_results', f'{args.model}_lr{args.learning_rate}')
     os.makedirs(output_dir, exist_ok=True)
     setup_logging(output_dir)
 
