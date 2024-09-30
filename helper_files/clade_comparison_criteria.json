@@ -1,0 +1,406 @@
+{
+  "animals": {
+    "Birds": [
+      "Apus_affinus_AF173619",
+      "Chordeiles_acutipennis_AF173622",
+      "Ciconia_nigra_AF173636",
+      "Columba_livia_AF173630",
+      "Tockus_nasutus_AF173626",
+      "Coracias_caudata_AF173625",
+      "Trogon_collaris_AF173623",
+      "Charadrius_semipalmatus_AF173638",
+      "Larus_glaucoides_AF173637",
+      "Turnix_sylvatica_AF173631",
+      "Cuculus_pallidus_AF173628",
+      "Grus_canadensis_AF173632",
+      "Tyrannus_tyrannus_AF173616",
+      "Musophaga_porphyreolopha_AF173618",
+      "Galbula_pastazae_AF173624",
+      "Upupa_epops_AF173627",
+      "Urocolius_macrourus_AF173617",
+      "Picoides_pubescens_AF173615",
+      "Ortalis_guttata_AF173613",
+      "Anas_platyrhynchos_AF173614",
+      "Coturnix_pectoralis_AF173611",
+      "Gallus_gallus_AF173612",
+      "Apteryx_australis_AF173609",
+      "Dromaius_novaehollandiae_AF173610"
+    ],
+    "Mammals": [
+      "Mus_musculus_X00686",
+      "Mus_musculus_X82564",
+      "Rattus_norvegicus_M11188",
+      "Rattus_norvegicus_X01117",
+      "Homo_sapien_K03432",
+      "Homo_sapien_M10098",
+      "Homo_sapien_X03205",
+      "Oryctolagus_cuniculus_X06778",
+      "Oryctolagus_cuniculus_X00640"
+    ],
+    "Amphibians": [
+      "Incilius_valliceps_M59386",
+      "Sooglossus_thomasseti_M59396",
+      "Xenopus_laevis_X02995",
+      "Ambystoma_mexicanum_M59384",
+      "Ranodon_sibiricus_AJ279506"
+    ]
+  },
+  "supergroups": {
+    "xxx": [
+      "xxx",
+      "xxx"
+    ],
+    "xxx": [
+      "xxx",
+      "xxx"
+    ],
+    "xxx": [
+      "xxx",
+      "xxx"
+    ]
+  },
+  "plants": {
+    "Conifers": [
+      "Calocedrus_decurrens_D85293",
+      "Calocedrus_formosana_D85298",
+      "Juniperus_chinensis_D38243",
+      "Cryptomeria_japonica_D85304",
+      "Taiwania_cryptomerioides_D38250",
+      "Cephalotaxus_wilsoniana_D38241",
+      "Amentotaxus_formosana_D38248",
+      "Torreya_nucifera_D38249",
+      "Taxus_wallichiana_D16445",
+      "Sciadopitys_verticillata_D85292",
+      "Nageia_nagi_D16447",
+      "Dacrycarpus_imbricatus_D38247",
+      "Phyllocladus_trichomonoides_D38244",
+      "Araucaria_excelsa_D38240",
+      "Agathis_borneensis_D85302",
+      "Pinus_elliottii_D38245",
+      "Pinus_wallichiana_X75080",
+      "Pinus_luchuensis_D38246",
+      "Picea_mariana_L01782",
+      "Abies_lasiocarpa_X79407",
+      "Larix_leptolepis_D85294"
+    ],
+    "Flowering_Plants": [
+      "Liriodendron_tulipifera_AF206954",
+      "Drimys_winteri_U42823",
+      "Saruma_henryi_AF207013",
+      "Illicium_parviflorum_L75832",
+      "Nuphar_variegata_AF206972",
+      "Penthorum_sedoides_U42825",
+      "Chloranthus_spicatus_D29787",
+      "Fragaria_x_ananassa_X15590",
+      "Lilium_superbum_AF206952",
+      "Cypripedium_calceolus_AF069208",
+      "Pistia_stratiotes_AF168869",
+      "Ceratophyllum_demersum_D85300",
+      "Solanum_tuberosum_X67238",
+      "Rheum_kialense_AB115757"
+    ],
+    "Terrestrial_Ferns": [
+      "Pteridium_aquilinum_U18628",
+      "Histiopteris_incisa_U18630",
+      "Paesia_scaberula_U18633",
+      "Hypolepis_muelleri_U18631",
+      "Adiantum_raddianum_U18621",
+      "Odontosoria_chinensis_U18627",
+      "Lonchitis_hirsuta_U18632",
+      "Asplenium_australasicum_D85303",
+      "Dicksonia_antarctica_U18624"
+    ],
+    "Bryopsida": [
+      "Fontinalis_antipyretica_AF023714",
+      "Lopidium_concinnum_AJ243349",
+      "Tortula_ruralis_AF023682",
+      "Mielichhoferia_elongata_AF023708",
+      "Hedwigia_ciliata_X91104",
+      "Dicranum_scoparium_X89874",
+      "Timmia_sibirica_AF023678"
+    ]
+  },
+  "kelps": {
+    "xxx": [
+      "xxx",
+      "xxx"
+    ],
+    "xxx": [
+      "xxx",
+      "xxx"
+    ],
+    "xxx": [
+      "xxx",
+      "xxx"
+    ]
+  },
+  "apicomplexans": {
+    "Cephaloidophora_etc": [
+      "Cephaloidophora_cf_communis_HQ891113",
+      "Cephaloidophora_cf_flava_MT112170",
+      "Cephaloidophora_oradareae_MG009200",
+      "Cephaloidophora_bipinnatae_MT112171",
+      "Thiriotia_pugettiae_HQ876006",
+      "Thiriotia_sp_LC034108",
+      "Thiriotia_hyperdolphinae_MG009199",
+      "Ganymedes_sp_FJ976721",
+      "Ganymedes_yurii_KU726617",
+      "Heliospora_caprellae_HQ876007",
+      "Heliospora_cf_longissima_HQ891115"
+    ],
+    "Selenidium_Clade_A": [
+      "Selenidium_hollandei_LN901445",
+      "Selenidium_patagonica_MH697736",
+      "Selenidium_cf_axiferens_MH697737",
+      "Selenidium_validusae_MN381959",
+      "Selenidium_pendula_LN901443",
+      "Selenidium_pygospionis_MH061278",
+      "Selenidium_sensimae_KC110869"
+    ],
+    "Lecudinids": [
+      "Lankesteria_abbotti_DQ093796",
+      "Lecudina_kitase_OQ650262",
+      "Lecudina_caspera_KY678215",
+      "Lecudina_longissima_FJ832157",
+      "Pterospora_floridiensis_DQ093794",
+      "Pterospora_schizosoma_DQ093793",
+      "Lithocystis_sp_DQ093795",
+      "Difficilina_fasoliformis_OQ650265",
+      "Undularius_glycerae_OQ650267",
+      "Veloxidium_leptosynaptae_JN857966"
+    ],
+    "Caliculium_etc": [
+      "Gregarina_blattarum_FJ459741",
+      "Leidyana_migrator_AF457130",
+      "Caliculium_glossobalani_KC890798",
+      "Gregarina_kingi_FJ459746",
+      "Gregarina_niphandrodes_AF129882",
+      "Gregarina_polymorpha_FJ459748",
+      "Gregarina_coronata_FJ459743"
+    ],
+    "Toxoplasma_etc": [
+      "Sarcocystis_halieti_MF946587",
+      "Sarcocystis_lutrae_KM657769",
+      "Sarcocystis_lari_MF946588",
+      "Sarcocystis_cymruensis_MT372785",
+      "Sarcocystis_muris_M64244",
+      "Neospora_caninum_AJ271354",
+      "Toxoplasma_gondii_X75429"
+    ],
+    "Babesia_etc": [
+      "Theileria_annulata_KF429799",
+      "Theileria_lestoquardi_AF081135",
+      "Theileria_parva_AF013418",
+      "Babesia_bigemina_AY603402",
+      "Babesia_microti_AB190459"
+    ]
+  },
+  "dinoflagellates": {
+    "Alexandrium_Clade_A": [
+      "Alexandrium_pseudogonyaulax_AB088302",
+      "Alexandrium_hiranoi_AY641564",
+      "Alexandrium_taylorii_AJ535385",
+      "Alexandrium_satoanum_AY641566",
+      "Alexandrium_monilatum_AY883005"
+    ],
+    "Alexandrium_Clade_B": [
+      "Alexandrium_australiense_AF022191",
+      "Alexandrium_pacificum_AB088280",
+      "Alexandrium_tamarense_X54946",
+      "Alexandrium_mediterraneum_AJ535386",
+      "Alexandrium_fundyense_U09048",
+      "Alexandrium_cohorticula_AF113935",
+      "Alexandrium_tamiyavanichii_AB088316",
+      "Alexandrium_fraterculus_AB088290",
+      "Alexandrium_affine_AB088282"
+    ],
+    "Fukuyoa_etc": [
+      "Gambierdiscus_sp_AB499535",
+      "Gambierdiscus_scabrosus_AB764269",
+      "Gambierdiscus_pacificus_EF202861",
+      "Gambierdiscus_balechii_KX384638",
+      "Gambierdiscus_toxicus_DQ388463",
+      "Gambierdiscus_belizeanus_EF202876",
+      "Gambierdiscus_australes_EF202891",
+      "Gambierdiscus_carolinianus_EF202897",
+      "Gambierdiscus_polynesiensis_EF202902",
+      "Gambierdiscus_caribaeus_EF202983",
+      "Gambierdiscus_carpenteri_EF202984",
+      "Fukuyoa_sp_AB548851",
+      "Fukuyoa_sp_KJ447125",
+      "Fukuyoa_ruetzleri_EF202853",
+      "Fukuyoa_yasumotoi_EF202846",
+      "Fukuyoa_paulensis_KM272972"
+    ],
+    "Tripos": [
+      "Tripos_tenuis_AF022192",
+      "Tripos_horridus_FJ402960",
+      "Tripos_platycornis_FJ824911",
+      "Tripos_hexacanthus_FJ402943",
+      "Tripos_contrarius_FJ402959",
+      "Tripos_massiliensis_FJ402942",
+      "Tripos_kofoidii_FJ402963",
+      "Tripos_concilians_FJ402950",
+      "Tripos_euarcuatus_FJ402946",
+      "Tripos_symmetricus_FJ402947",
+      "Tripos_arietinus_FJ402956",
+      "Tripos_longipes_DQ388462",
+      "Tripos_paradoxides_FJ402965",
+      "Tripos_limulus_FJ402962",
+      "Tripos_petersenii_FJ402953",
+      "Tripos_azoricus_FJ402954",
+      "Tripos_candelabrus_FJ402945",
+      "Tripos_pentagonus_FJ402948",
+      "Tripos_declinatus_FJ402949",
+      "Tripos_minutus_FJ402964",
+      "Tripos_furca_FJ402966",
+      "Tripos_extensus_FJ402957",
+      "Tripos_fusus_FJ402958",
+      "Tripos_gravidus_FJ402961",
+      "Tripos_digitatus_FJ824910"
+    ],
+    "Nusuttodinium_etc": [
+      "Nusuttodinium_acidotum_JQ639760",
+      "Nusuttodinium_aeruginosum_AB921312",
+      "Pellucidodinium_psammophilum_LC027031",
+      "Nusuttodinium_desymbiontum_LC027034",
+      "Nusuttodinium_latum_AB921302",
+      "Nusuttodinium_amphidinioides_AB921306",
+      "Nusuttodinium_poecilochroum_AB921304",
+      "Nusuttodinium_myriopyrenoides_AB921301",
+      "Spiniferodinium_galeiforme_GU295203",
+      "Spiniferodinium_palauense_AB626150",
+      "Spiniferodinium_palustre_AB921299"
+    ],
+    "Dinophysis_etc": [
+      "Dinophysis_fortii_AB073118",
+      "Dinophysis_infundibulum_AB366002",
+      "Dinophysis_acuta_AJ506973",
+      "Dinophysis_caudata_EU780644",
+      "Dinophysis_acuminata_AB073117",
+      "Dinophysis_tripos_HM853816",
+      "Dinophysis_norvegica_AB073119",
+      "Histioneis_sp_EU780646",
+      "Histioneis_longicollis_HM853804",
+      "Histioneis_gubernans_HM853802",
+      "Histioneis_cymbalaria_HM853801",
+      "Ornithocercus_magnificus_HM853797",
+      "Ornithocercus_quadratus_EU780647",
+      "Ornithocercus_heteroporus_HM853796",
+      "Dinophysis_hastata_HM853813",
+      "Dinophysis_acutissima_HM853807",
+      "Dinophysis_pusilla_HM853808",
+      "Dinophysis_monacantha_HM853810",
+      "Dinophysis_odiosa_HM853811",
+      "Dinophysis_phalacromoides_HM853806",
+      "Phalacroma_rotundatum_AJ506975",
+      "Phalacroma_oxytoxoides_HM853782",
+      "Phalacroma_porodictyum_HM853791",
+      "Phalacroma_sp_HM853785",
+      "Phalacroma_favus_HM853786",
+      "Phalacroma_doryphorum_HM853779",
+      "Phalacroma_rapa_FJ477082",
+      "Phalacroma_mitra_HM853775",
+      "Phalacroma_parvulum_HM853771"
+    ],
+    "Amphisolenia": [
+      "Amphisolenia_bidentata_GU196149",
+      "Amphisolenia_sp_HM853764",
+      "Amphisolenia_globifera_HM853765",
+      "Amphisolenia_schauinslandii_HM853766"
+    ],
+    "Heterodinium": [
+      "Heterodinium_doma_JQ446581",
+      "Heterodinium_kofoidii_JQ446592",
+      "Heterodinium_globosum_JQ446586",
+      "Heterodinium_rigdeniae_JQ446588",
+      "Heterodinium_milneri_JQ446582",
+      "Heterodinium_scrippsii_JQ446590"
+    ],
+    "Symbiodinium_etc": [
+      "Symbiodinium_corculorum_L13717",
+      "Symbiodinium_meandrinae_L13718",
+      "Symbiodinium_pilosum_X62650",
+      "Symbiodinium_microadriaticum_M88521",
+      "Symbiodinium_sp_AB016538",
+      "Symbiodinium_californium_AF225965",
+      "Symbiodinium_goreaui_EF036539",
+      "Symbiodinium_kawagutii_HQ822131",
+      "Biecheleria_cincta_FR690459",
+      "Biecheleria_brevisulcata_LC068842",
+      "Biecheleria_tirezensis_KF463288",
+      "Biecheleria_baltica_EF058252",
+      "Pelgodinium_beii_U37365",
+      "Pelagodinium_sp_EF492490",
+      "Protodinium_simplex_U41086",
+      "Biecheleriopsis_adriatica_HG792067",
+      "Ansanella_granifera_HG529978",
+      "Biecheleria_natalensis_LC054923",
+      "Polarella_glacialis_AF099183",
+      "Asulcocephalium_miricentonis_LC068836",
+      "Piscinoodinium_sp_EF016917",
+      "Leiocephalium_pseudosanguineum_LC068840"
+    ],
+    "Protoperidinium_etc": [
+      "Protoperidinium_fusiforme_AB716912",
+      "Protoperidinium_fukuyoi_AB780842",
+      "Protoperidinium_parthenopes_AB716915",
+      "Protoperidinium_americanum_AB716911",
+      "Islandinium_tricingulatum_AB716916",
+      "Islandinium_minutum_JX627340"
+    ],
+    "Niea_etc": [
+      "Niea_acanthocysta_AB273721",
+      "Niea_torta_AB273724",
+      "Qia_lebouriae_AB261512",
+      "Diplopsalopsis_bomba_AB261513",
+      "Gotoius_excentricus_AB261514"
+    ],
+    "Protopteridinium_Majority_Clade": [
+      "Protoperidinium_leonis_AB181894",
+      "Protoperidinium_conicum_AY443020",
+      "Protoperidinium_thulesense_AB261518",
+      "Protoperidinium_punctulatum_AB181904",
+      "Protoperidinium_denticulatum_AB181890",
+      "Protoperidinium_thorianum_AB181907",
+      "Protoperidinium_abei_AB181881",
+      "Protoperidinium_excentricum_AY443021",
+      "Kolkwitziella_acuta_LC075591",
+      "Protoperidinium_pellucidum_AY443022",
+      "Protoperidinium_pallidum_AB181899",
+      "Protoperidinium_bipes_AB284159",
+      "Protoperidinium_crassipes_AB181888",
+      "Protoperidinium_elegans_AB255835",
+      "Protoperidinium_divergens_AB181892",
+      "Protoperidinium_pentagonum_AB255837"
+    ],
+    "Tetsudodinium": [
+      "Testudodinium_corrugatum_AB704003",
+      "Testudodinium_sp_LC054943",
+      "Testudodinium_testudo_AB704002",
+      "Testudodinium_maedaense_AB704005"
+    ],
+    "Unruhdinium": [
+      "Unruhdinium_penardii_AB353771",
+      "Unruhdinium_niei_HM596542",
+      "Unruhdinium_minima_JQ639767",
+      "Unruhdinium_kevei_AB353770",
+      "Unruhdinium_jiulongensis_KM217384"
+    ],
+    "Peridinium": [
+      "Peridinium_bipes_AF231805",
+      "Peridinium_limbatum_DQ980482",
+      "Peridinium_gatunense_DQ166208",
+      "Peridinium_cinctum_DQ166209",
+      "Peridinium_willei_AF274272",
+      "Peridinium_volzii_EF058248",
+      "Peridinium_sp_AF022202"
+    ],
+    "Cucumeridinium": [
+      "Cucumeridinium_coeruleum_KR139785",
+      "Cucumeridinium_lira_KR139787",
+      "Cucumeridinium_cucumis_KR139788"
+    ]
+  }
+}
+
