@@ -3,7 +3,7 @@
 # Define the models and updated learning rates
 models=("MLPPhyloNet" "CNNPhyloNet" "LSTMPhyloNet" "TrPhyloNet" "AePhyloNet" "DiffPhyloNet")
 learning_rates=("0.01" "0.001" "0.0001" "0.00001" "0.000001" "0.0000001")
-clades=("plants" "animals" "alveolates")
+clades=("plants" "animals" "alveolates" "dinoflagellates")
 
 # Directory where the script is located
 script_dir="$(pwd)/src"
