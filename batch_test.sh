@@ -3,13 +3,13 @@
 # Define the models and updated learning rates
 models=("MLPPhyloNet" "CNNPhyloNet" "LSTMPhyloNet" "TrPhyloNet" "AePhyloNet" "DiffPhyloNet")
 learning_rates=("0.01" "0.001" "0.0001" "0.00001" "0.000001" "0.0000001")
-clades=("plants" "animals" "alveolates" "dinoflagellates")
+clades=("plants" "animals" "alveolates" "dinoflagellates" "kelps" "supergroups")
 
 # Directory where the script is located
 script_dir="$(pwd)/src"
 
 # Directory to store results (working directory)
-results_dir="$(pwd)/results"
+results_dir="$(pwd)/testing_results"
 
 # Create the results directory if it does not exist
 mkdir -p "$results_dir"
@@ -25,7 +25,7 @@ for model in "${models[@]}"; do
             mkdir -p "$output_dir"
 
             # Run the Python script with the current model and learning rate
-            python3 "$script_dir/test.py" --model "$model" --learning_rate "$lr" --clade "$cld" --output_dir "$output_dir"
+            python3 "$script_dir/test.py" --model "$model" --learning_rate "$lr" --clade "$cld"
 
             echo "Completed model: $model with learning rate: $lr on clade $cld"
         done
@@ -40,4 +40,3 @@ echo "All experiments are complete!"
 # chmod +x batch_test.sh
 # 2) Run the script:
 # ./batch_test.sh
-
