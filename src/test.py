@@ -27,7 +27,7 @@ from models import MLPPhyloNet, CNNPhyloNet, LSTMPhyloNet, TrPhyloNet, AePhyloNe
 
 # Argument parsing
 parser = argparse.ArgumentParser(description="Test trained models with various clades and metrics")
-parser.add_argument('--model', type=str, required=True, help='Model to use (e.g., CNNPhyloNet, MLPPhyloNet)')
+parser.add_argument('--model', type=str, required=True, help='Model to use (e.g., CNNPhyloNet, DiffPhyloNet)')
 parser.add_argument('--learning_rate', type=float, required=True, help='Learning rate used during training')
 parser.add_argument('--clade', type=str, required=True, help='Clade for testing (e.g., Clade_A, Clade_B)')
 
@@ -135,7 +135,14 @@ if __name__ == "__main__":
     with torch.no_grad():
         for seq in tqdm(dataset):
             seq = seq.unsqueeze(0).to(device)  # Add batch dimension and move to device
-            embedding = model(seq)  # Generate embedding
+            
+            # Add the handling of 't' for diffusion models
+            if isinstance(model, DiffPhyloNet):
+                t = torch.full((seq.size(0),), 0.5).to(device)  # Using t = 0.5 for all sequences
+                embedding = model(seq, t)  # Pass sequence and 't' to the diffusion model
+            else:
+                embedding = model(seq)  # For non-diffusion models
+            
             embeddings.append(embedding.squeeze(0).cpu().numpy())
 
     # Convert embeddings to numpy array
@@ -186,7 +193,6 @@ if __name__ == "__main__":
     plt.title("PCA of DNA Sequence Embeddings")
     plt.xlabel("PC1")
     plt.ylabel("PC2")
-    plt.tight_layout()
     plt.savefig(pca_plot_file, dpi=400)
     print(f"PCA plot saved to {pca_plot_file}")
 
@@ -212,4 +218,3 @@ if __name__ == "__main__":
 
 # Example execution:
 # python3 ./src/test.py --model CNNPhyloNet --learning_rate 0.001 --clade plants
-
