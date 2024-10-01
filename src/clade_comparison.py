@@ -25,12 +25,17 @@ def load_tree(file_path: str) -> Tree:
         newick_str = file.read().strip()
     return Tree(newick_str, format=1)
 
-def is_monophyletic(tree, taxa_list):
-    """Check if a list of taxa forms a monophyletic group in the tree."""
+def is_monophyletic(tree, taxa):
+    """
+    Checks if a given set of taxa are monophyletic in the provided tree using ETE3.
+    """
     try:
-        common_ancestor = tree.get_common_ancestor(taxa_list)
-        return set(common_ancestor.get_leaf_names()) == set(taxa_list)
-    except:
+        mrca = tree.get_common_ancestor(taxa)
+        leaf_names = set(mrca.get_leaf_names())
+        # The set of taxa should match the leaf names under the MRCA exactly
+        return set(taxa) == leaf_names
+    except Exception as e:
+        print(f"Error in monophyly test: {e}")
         return False
 
 def load_clade_comparison_criteria(file_path):
@@ -38,29 +43,41 @@ def load_clade_comparison_criteria(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-def perform_monophyly_tests(iqtree, test_tree, clade_criteria):
+def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
     """
     Perform subclade-to-subclade comparison between the ground truth tree and test tree,
     checking if the taxa in each subclade are monophyletically grouped.
+    
+    Only process the clade that matches the 'selected_clade' passed during execution.
     """
     results = []
     
-    for subclade_title, taxa_names in clade_criteria.items():
-        # Ensure all taxa exist in both trees
-        taxa_in_iqtree = [taxon for taxon in taxa_names if taxon in iqtree.get_leaf_names()]
-        taxa_in_test_tree = [taxon for taxon in taxa_names if taxon in test_tree.get_leaf_names()]
-        
-        if not taxa_in_iqtree or not taxa_in_test_tree:
-            # If any taxa from the subclade are missing, skip this test
-            print(f"Skipping {subclade_title}: Taxa missing in one or both trees.")
+    for clade_title, subclades in clade_criteria.items():
+        if clade_title != selected_clade:
+            # Skip the clade if it doesn't match the selected_clade
             continue
         
-        # Check if the taxa are monophyletic in both the ground truth tree and test tree
-        iqtree_monophyly = is_monophyletic(iqtree, taxa_in_iqtree)
-        test_tree_monophyly = is_monophyletic(test_tree, taxa_in_test_tree)
-        
-        # Record the result (True if both trees agree on monophyly)
-        results.append((subclade_title, iqtree_monophyly, test_tree_monophyly, iqtree_monophyly == test_tree_monophyly))
+        print(f"Checking clade: {clade_title}...")
+        for subclade_title, taxa_names in subclades.items():
+            print(f"  Checking subclade: {subclade_title}...")
+            
+            # Ensure all taxa exist in both trees
+            taxa_in_iqtree = [taxon for taxon in taxa_names if taxon in iqtree.get_leaf_names()]
+            taxa_in_test_tree = [taxon for taxon in taxa_names if taxon in test_tree.get_leaf_names()]
+            
+            if not taxa_in_iqtree or not taxa_in_test_tree:
+                # If any taxa from the subclade are missing, skip this test
+                print(f"    Skipping subclade '{subclade_title}': Taxa missing in one or both trees.")
+                continue
+            
+            # Check if the taxa are monophyletic in both the ground truth tree and test tree
+            iqtree_monophyly = is_monophyletic(iqtree, taxa_in_iqtree)
+            test_tree_monophyly = is_monophyletic(test_tree, taxa_in_test_tree)
+            
+            # Record the result (True if both trees agree on monophyly)
+            result = (subclade_title, iqtree_monophyly, test_tree_monophyly, iqtree_monophyly == test_tree_monophyly)
+            print(f"    Result for {subclade_title}: IQTree Monophyly={iqtree_monophyly}, Test Tree Monophyly={test_tree_monophyly}, Agreement={result[3]}")
+            results.append(result)
     
     return results
 
@@ -75,7 +92,7 @@ def save_monophyly_results(results, output_file):
 if __name__ == "__main__":
 
     # Directory to save the results based on the model, learning rate, and clade
-    comparison_dir = f"comparison_results/{args.model}_lr{args.learning_rate}/{args.clade}"
+    comparison_dir = f"comparison_results/{args.model}_lr{args.learning_rate}"
     os.makedirs(comparison_dir, exist_ok=True)
 
     # File paths
@@ -91,7 +108,7 @@ if __name__ == "__main__":
     clade_comparison_criteria = load_clade_comparison_criteria(clade_criteria_file)
 
     # Perform monophyly tests
-    monophyly_results = perform_monophyly_tests(iqtree, test_tree, clade_comparison_criteria)
+    monophyly_results = perform_monophyly_tests(iqtree, test_tree, clade_comparison_criteria, f'{args.clade}')
 
     # Save monophyly test results to CSV
     monophyly_results_file = f"{comparison_dir}/{args.clade}_monophyly_comparison.csv"
