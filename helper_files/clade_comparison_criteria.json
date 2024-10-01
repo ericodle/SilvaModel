@@ -46,17 +46,50 @@
     ]
   },
   "supergroups": {
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Telonemids": [
+      "Telonema_subtilis_AJ564771",
+      "Telonema_antarcticum_AJ564773"
     ],
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Ancyromonadida": [
+      "Ancyromonas_sigmoides_DQ207565",
+      "Planomonas_howeae_EU349235",
+      "Nutomonas_longa_JQ340331"
     ],
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Cryptophytes_Cryptists": [
+      "Falcomonas_daucoides_AF143943",
+      "Hemiarma_marina_LC151286"
+    ],
+    "CRuMS": [
+      "Diphylleia_rotans_MF039351",
+      "Collodictyon_triciliatum_MF039355"
+    ],
+    "Archiplastida": [
+      "Parasitaxus_ustus_AF342765",
+      "Potentilla_indica_AH001625",
+      "Equisetum_hyemale_U18500"
+    ],
+    "Coccolithophores_Haptista": [
+      "Calcidiscus_quadriperforatus_AJ544115",
+      "Calcidiscus_leptoporus_AJ544116",
+      "Algirosphaera_robusta_AM490985",
+      "Corcontochrysis_noctivaga_DQ207406",
+      "Pavlova_salina_L34669"
+    ],
+    "Yellow_Green_Algae_Stramenopiles": [
+      "Xanthophyceae_sp_AY197636",
+      "Chlorellidium_pyrenoidosum_AJ579338",
+      "Bumilleriopsis_pyrenoidosa_AJ579332",
+      "Heterococcus_sp_AJ579336",
+      "Botrydiopsis_pyrenoidosa_AJ579337"
+    ],
+    "Labyrinthula_Stramenopiles": [
+      "Ulkenia_sp_AB810962",
+      "Parietichytrium_sp_AB810971",
+      "Aurantiochytrium_sp_AB811027"
+    ],
+    "Radiolarians_Rhizaria": [
+      "Acanthometron_sp_JQ697712",
+      "Xiphacantha_alata_JQ697706"
     ]
   },
   "plants": {
@@ -121,17 +154,89 @@
     ]
   },
   "kelps": {
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Sargassum_etc": [
+      "Sargassum_thunbergii_EF634357",
+      "Sargassum_thunbergii_EF634356",
+      "Sargassum_thunbergii_EF634355",
+      "Sargassum_thunbergii_JN604979",
+      "Sargassum_vachellianum_JQ327705",
+      "Sargassum_thunbergii_EF634359",
+      "Sargassum_confusum_AB011431",
+      "Sargassum_horneri_AB011429",
+      "Sargassum_macrocarpum_AB011432",
+      "Hizikia_fusiformis_AB011428",
+      "Myagropsis_myagroides_AB011427",
+      "Cystoseira_schiffneri_KJ499463",
+      "Coccophora_langsdorfii_AB011426",
+      "Cystoseira_hakodatensis_AB011425"
     ],
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Fucus_etc": [
+      "Fucus_distichus_M97959",
+      "Fucus_gardneri_X53987",
+      "Fucus_distichus_AB011423",
+      "Pelvetia_babingtonii_AB011424",
+      "Silvetia_siliquosa_GQ433994"
     ],
-    "xxx": [
-      "xxx",
-      "xxx"
+    "Saccharina_etc": [
+      "Saccharina_sculpera_AF123577",
+      "Postelsia_palmaeformis_AF123582",
+      "Costaria_costata_M97958",
+      "Agarum_clathratum_AF123576",
+      "Costaria_costata_AB022819",
+      "Ecklonia_cava_AF123579",
+      "Egregia_menziesii_AF123580",
+      "Laminaria_angustata_AB022818",
+      "Laminaria_japonica_AB022817",
+      "Saccharina_japonica_AF123575",
+      "Alaria_fistulosa_AF123578"
+    ],
+    "Halothrix_etc": [
+      "Halothrix_ambigua_AY232607",
+      "Leathesia_difformis_AY232603",
+      "Myrionema_strangulans_AY232605",
+      "Papenfussiella_kuromo_AY232606",
+      "Pylaiella_littoralis_AY032606",
+      "Ectocarpus_siliculosus_AY307398",
+      "Scytosiphon_lomentaria_L43066"
+    ],
+    "Asterocladon": [
+      "Asterocladon_interjectum_AB102865",
+      "Asterocladon_rhodochortonoides_AB056156"
+    ],
+    "Dictyota_Clade_A": [
+      "Dictyota_coriacea_AB090389",
+      "Pachydictyon_coriaceum_AF350224",
+      "Dictyota_coriacea_AB087111",
+      "Pachydictyon_coriaceum_AF350225",
+      "Dictyota_dichotoma_AF350227",
+      "Dictyota_linearis_AB087108",
+      "Rugulopteryx_okamurae_AB090388",
+      "Rugulopteryx_okamurae_AB087110",
+      "Dilophus_okamurae_AF350229",
+      "Dilophus_intermedius_JQ031992"
+    ],
+    "Zonaria_etc": [
+      "Zonaria_crenata_AF350234",
+      "Zonaria_diesingiana_AB087134",
+      "Zonaria_desigiana_AF350233",
+      "Lobophora_variegata_AB090391",
+      "Distromium_decumbens_AF350231"
+    ],
+    "Padina": [
+      "Padina_japonica_AB087126",
+      "Padina_japonica_AB090394",
+      "Padina_japonica_AB095298",
+      "Padina_crassa_AF350240",
+      "Padina_tenuis_AF350239",
+      "Padina_australis_AB090393",
+      "Padina_arborescens_AB090392",
+      "Padina_crassa_AB095297"
+    ],
+    "Bodanella_etc": [
+      "Heribaudiella_fluviatilis_AY307394",
+      "Phaeostrophion_irregulare_AB117949",
+      "Bodanella_lauterborni_AY307396",
+      "Bodanella_lauterborni_AY307395"
     ]
   },
   "apicomplexans": {
@@ -403,4 +508,3 @@
     ]
   }
 }
-
