@@ -25,15 +25,16 @@ def load_tree(file_path: str) -> Tree:
         newick_str = file.read().strip()
     return Tree(newick_str, format=1)
 
-def is_monophyletic(tree, taxa):
-    """
-    Checks if a given set of taxa are monophyletic in the provided tree using ETE3.
-    """
+def is_monophyletic(tree, taxa, target_attr='name', ignore_missing=False, unrooted=True):
     try:
-        mrca = tree.get_common_ancestor(taxa)
-        leaf_names = set(mrca.get_leaf_names())
-        # The set of taxa should match the leaf names under the MRCA exactly
-        return set(taxa) == leaf_names
+        is_monophyletic, clade_type, breaking_leaves = tree.check_monophyly(values=set(taxa), 
+                                                                          target_attr=target_attr, 
+                                                                          ignore_missing=ignore_missing, 
+                                                                          unrooted=unrooted)
+        return is_monophyletic
+    except ValueError as e:
+        print(f"ValueError in monophyly test: {e}")
+        return False
     except Exception as e:
         print(f"Error in monophyly test: {e}")
         return False
@@ -54,7 +55,7 @@ def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
         
         print(f"Checking clade: {clade_title}...")
         for subclade_title, taxa_names in subclades.items():
-            print(f"  Checking subclade: {subclade_title}...")
+            print(f"  Checking subclade: {subclade_title} with taxa {taxa_names}")
             
             # Ensure all taxa exist in the IQTree (ground truth)
             taxa_in_iqtree = [taxon for taxon in taxa_names if taxon in iqtree.get_leaf_names()]
@@ -69,8 +70,8 @@ def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
             taxa_in_test_tree = [taxon for taxon in taxa_names if taxon in test_tree.get_leaf_names()]
 
             # Check if the taxa are monophyletic in both the ground truth tree and test tree
-            iqtree_monophyly = is_monophyletic(iqtree, taxa_in_iqtree)
-            test_tree_monophyly = is_monophyletic(test_tree, taxa_in_test_tree)
+            iqtree_monophyly = is_monophyletic(iqtree, taxa_names)
+            test_tree_monophyly = is_monophyletic(test_tree, taxa_names)
             
             # Record the result (True if both trees agree on monophyly)
             result = (subclade_title, iqtree_monophyly, test_tree_monophyly, iqtree_monophyly == test_tree_monophyly)
@@ -115,4 +116,3 @@ if __name__ == "__main__":
 
 # Example execution:
 # python3 ./src/clade_comparison.py --model CNNPhyloNet --learning_rate 0.001 --clade plants
-
