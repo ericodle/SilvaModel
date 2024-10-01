@@ -44,12 +44,7 @@ def load_clade_comparison_criteria(file_path):
         return json.load(file)
 
 def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
-    """
-    Perform subclade-to-subclade comparison between the ground truth tree and test tree,
-    checking if the taxa in each subclade are monophyletically grouped.
-    
-    Only process the clade that matches the 'selected_clade' passed during execution.
-    """
+
     results = []
     
     for clade_title, subclades in clade_criteria.items():
@@ -61,15 +56,18 @@ def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
         for subclade_title, taxa_names in subclades.items():
             print(f"  Checking subclade: {subclade_title}...")
             
-            # Ensure all taxa exist in both trees
+            # Ensure all taxa exist in the IQTree (ground truth)
             taxa_in_iqtree = [taxon for taxon in taxa_names if taxon in iqtree.get_leaf_names()]
+            missing_in_iqtree = set(taxa_names) - set(taxa_in_iqtree)
+            
+            # Print out missing taxa from the IQTree if any are found
+            if missing_in_iqtree:
+                print(f"    Warning: Taxa missing in IQTree for subclade '{subclade_title}': {', '.join(missing_in_iqtree)}")
+                continue  # Skip the monophyly test if any taxa are missing in IQTree
+            
+            # Ensure all taxa exist in the test tree
             taxa_in_test_tree = [taxon for taxon in taxa_names if taxon in test_tree.get_leaf_names()]
-            
-            if not taxa_in_iqtree or not taxa_in_test_tree:
-                # If any taxa from the subclade are missing, skip this test
-                print(f"    Skipping subclade '{subclade_title}': Taxa missing in one or both trees.")
-                continue
-            
+
             # Check if the taxa are monophyletic in both the ground truth tree and test tree
             iqtree_monophyly = is_monophyletic(iqtree, taxa_in_iqtree)
             test_tree_monophyly = is_monophyletic(test_tree, taxa_in_test_tree)
@@ -77,6 +75,7 @@ def perform_monophyly_tests(iqtree, test_tree, clade_criteria, selected_clade):
             # Record the result (True if both trees agree on monophyly)
             result = (subclade_title, iqtree_monophyly, test_tree_monophyly, iqtree_monophyly == test_tree_monophyly)
             print(f"    Result for {subclade_title}: IQTree Monophyly={iqtree_monophyly}, Test Tree Monophyly={test_tree_monophyly}, Agreement={result[3]}")
+            
             results.append(result)
     
     return results
