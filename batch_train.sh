@@ -8,7 +8,7 @@ learning_rates=("0.01" "0.001" "0.0001" "0.00001" "0.000001" "0.0000001")
 script_dir="$(pwd)/src"
 
 # Directory to store results (working directory)
-results_dir="$(pwd)/results"
+results_dir="$(pwd)/training_results"
 
 # Create the results directory if it does not exist
 mkdir -p "$results_dir"
