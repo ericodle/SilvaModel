@@ -124,8 +124,8 @@ if __name__ == "__main__":
             end_time = time.time()  # End timing the epoch
             epoch_duration = end_time - start_time
 
-            logging.info(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
-            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
+            logging.info(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.8f}, Duration: {epoch_duration:.4f} seconds")
+            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.8f}, Duration: {epoch_duration:.4f} seconds")
 
             # Check for early stopping
             if epoch > 0 and avg_train_loss >= 0.99 * train_losses[-2]:
