@@ -85,6 +85,7 @@ if __name__ == "__main__":
     # Training loop (and check for Diffusion Model)
     if isinstance(model, DiffPhyloNet):
         for epoch in range(num_epochs):
+            start_time = time.time()  # Start timing the epoch
             train_loss = 0
             model.train()
 
@@ -119,6 +120,9 @@ if __name__ == "__main__":
                     val_loss += loss.item()
             avg_val_loss = val_loss / len(val_dataloader)
             val_losses.append(avg_val_loss)
+
+            end_time = time.time()  # End timing the epoch
+            epoch_duration = end_time - start_time
 
             logging.info(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
             print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
