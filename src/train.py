@@ -120,8 +120,8 @@ if __name__ == "__main__":
             avg_val_loss = val_loss / len(val_dataloader)
             val_losses.append(avg_val_loss)
 
-            logging.info(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}")
-            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}")
+            logging.info(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
+            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss:.12f}, Val Loss: {avg_val_loss:.4f}, Duration: {epoch_duration:.4f} seconds")
 
             # Check for early stopping
             if epoch > 0 and avg_train_loss >= 0.99 * train_losses[-2]:
@@ -211,6 +211,3 @@ if __name__ == "__main__":
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, 'epochwise_loss.png'), dpi=400)
     plt.close()
-
-# Example execution
-# python3 ./src/train.py --model MLPPhyloNet --learning_rate 0.000001
